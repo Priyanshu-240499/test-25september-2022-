@@ -34,8 +34,11 @@
       .carousel-indicators{
         top: 2em;
       }
-      body{
+      .body{
         margin: 0.5% 10%;
+      }
+      body{
+        position: relative;
       }
       .green{
         color:rgba(14, 167, 14,1);
@@ -53,6 +56,7 @@
         border: none;
         background-color: rgba(0,0,0,0.1);
         font-size: smaller;
+        
       }
       .icon i{
         background-color: rgba(14, 167, 14,0.2);
@@ -63,7 +67,7 @@
       .fl{
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-around;
         margin: 2%;
       }
       .card{
@@ -105,7 +109,22 @@
     .card{
         width: 100% !important;
     }
+    .up_anchor{
+        display: none;
+    }
     
+    }
+    
+    .up_anchor{
+        position: fixed;
+        top: 90%;
+        right: 10vh;
+        border-radius: 50%;
+        background-color: green;
+        padding: 1% 1.5%; 
+    }
+    .up_anchor i{
+        color: white;
     }
 
       
@@ -113,7 +132,14 @@
     </style>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg bg-light">
+    <div class="body">
+        <a class="up_anchor" href="#navigation">
+    
+        <i class="fa-solid fa-arrow-up"></i>
+    
+    
+    </a>
+    <nav class="navbar navbar-expand-lg bg-light" id="navigation">
       <div class="container-fluid">
         <h2 class="green">Green</h2>
         <button
@@ -204,7 +230,7 @@
             <form action="web" method="post">
                 <div class="fl">
                     <div class="icon">
-                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                        <i class="fa-solid fa-location-dot"></i>
                     </div>
                     <div class="content">
                         <label for="location">Location</label><br>
@@ -213,7 +239,7 @@
                 </div>
                 <div class="fl">
                     <div class="icon">
-                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                        <i class="fa-regular fa-envelope"></i>
                     </div>
                     <div class="content">
                         <label for="email">Email</label><br>
@@ -222,7 +248,7 @@
                 </div>
                 <div class="fl">
                     <div class="icon">
-                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                        <i class="fa-solid fa-mobile-screen-button"></i>
                     </div>
                     <div class="content">
                         <label for="call">Call</label><br>
@@ -265,6 +291,7 @@
             
         </div>
       </div>
+    </div>
     </div>
 
 
